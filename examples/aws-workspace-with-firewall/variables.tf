@@ -1,17 +1,23 @@
-variable "databricks_account_username" {}
-variable "databricks_account_password" {}
-variable "databricks_account_id" {}
+variable "databricks_account_username" {
+
+}
+variable "databricks_account_password" {
+  
+}
+variable "databricks_account_id" { 
+
+}
 
 variable "tags" {
   default = {}
 }
 
 variable "cidr_block" {
-  default = "10.4.0.0/16"
+  default = "10.215.0.0/16"
 }
 
 variable "region" {
-  default = "eu-west-2"
+  default = "us-west-2"
 }
 
 resource "random_string" "naming" {
@@ -25,21 +31,21 @@ variable "whitelisted_urls" {
 }
 
 variable "db_web_app" {
-  default = "london.cloud.databricks.com"
+  default = "oregon.cloud.databricks.com"
 }
 
 variable "db_tunnel" {
-  default = "tunnel.eu-west-2.cloud.databricks.com"
+  default = "tunnel.cloud.databricks.com"
 }
 
 variable "db_rds" {
-  default = "mdio2468d9025m.c6fvhwk6cqca.eu-west-2.rds.amazonaws.com"
+  default = "mdpartyyphlhsp.caj77bnxuhme.us-west-2.rds.amazonaws.com"
 }
 
 variable "db_control_plane" {
-  default = "18.134.65.240/28"
+  default = "44.234.192.32/28"
 }
 
 variable "prefix" {
-  default = "demo"
+  default = "dai-platform"
 }
